@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const data = fs.readFileSync('./Day 1/report.txt', 'utf8');
+const data = fs.readFileSync('./Day 1/input.txt', 'utf8');
 const entries = data.split('\r\n').map(e => parseInt(e));
 
 for (let i = 0; i < entries.length; i++) {
