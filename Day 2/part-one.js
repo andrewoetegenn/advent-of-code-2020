@@ -8,8 +8,8 @@ var validPasswords = 0;
 policies.forEach(policy => {
     const groups = policy.match(/(\d*)-(\d*) ([a-z]): ([a-z]*)/);
 
-    const min = groups[1];
-    const max = groups[2];
+    const min = parseInt(groups[1]);
+    const max = parseInt(groups[2]);
     const character = groups[3];
     const password = groups[4];
 
