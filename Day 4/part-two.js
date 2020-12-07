@@ -25,8 +25,6 @@ passports.forEach(passport => {
             };
         });
 
-    console.log(fields);
-
     let valid = true;
 
     requiredFields.forEach(requiredField => {
@@ -42,8 +40,6 @@ passports.forEach(passport => {
             return;
         }
     });
-
-    console.log(`IsValid: ${valid}`);
 
     if (valid) {
         validPassports++;
