@@ -9,7 +9,15 @@ groups.forEach(group => {
     let persons = group.split(/[ \r\n]+/);
     let questions = [...new Set(persons.join('').split(''))];
 
-    total += questions.length;
+    let groupTotal = 0;
+
+    questions.forEach(question => {
+        if (persons.every(person => person.includes(question))) {
+            groupTotal++;
+        }
+    });
+
+    total += groupTotal;
 });
 
 console.log(total);
